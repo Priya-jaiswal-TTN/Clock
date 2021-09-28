@@ -34,11 +34,6 @@ function showTime() {
   
     document.getElementById("time") 
             .innerHTML = currentTime; 
-
-    // if(format==="AM" )
-    // document.getElementById("message").innerHTML= "Good Morning";
-    // else
-    // document.getElementById("message").innerHTML= "Good Evening";
 } 
 showTime(); 
 
