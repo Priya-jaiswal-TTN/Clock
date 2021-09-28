@@ -5,6 +5,16 @@ function showTime() {
     let minute = time.getMinutes(); 
     let sec = time.getSeconds(); 
     var format = "AM"; 
+
+    if(hour>=0 && hour<12){
+        document.getElementById("message").innerHTML= "Good Morning";
+    }else if(hour>=12 && hour<16){
+        document.getElementById("message").innerHTML= "Good Afternoon";
+    }else if(hour>=16 && hour<21){
+        document.getElementById("message").innerHTML= "Good Evening";
+    }else if(hour>=21 && hour<24){
+        document.getElementById("message").innerHTML= "Good Night";
+    }
   
     if (hour > 12) { 
         hour -= 12; 
@@ -25,10 +35,10 @@ function showTime() {
     document.getElementById("time") 
             .innerHTML = currentTime; 
 
-    if(format==="AM")
-    document.getElementById("message").innerHTML= "Good Morning";
-    else
-    document.getElementById("message").innerHTML= "Good Evening";
+    // if(format==="AM" )
+    // document.getElementById("message").innerHTML= "Good Morning";
+    // else
+    // document.getElementById("message").innerHTML= "Good Evening";
 } 
 showTime(); 
 
